@@ -1,4 +1,4 @@
-import wineImg from '.wine.jpg';
+import wineImg from './wine.png';
 
 const menuItems = [];
 
@@ -52,7 +52,7 @@ export default function loadMenu(parentContainer) {
     parentContainer.appendChild(container);
 } 
 
-function createItemCard(menuItem) {
+function createItemCard(item) {
     const card = document.createElement('div');
     
     if (item.type === 'food') {
@@ -74,11 +74,90 @@ function createItemCard(menuItem) {
     const price = document.createElement('p');
     price.textContent = `$${item.price}.00`;
 
-    div.appendChild(img);
-    div.appendChild(name);
-    div.appendChild(description);
-    div.appendChild(price);
+    card.appendChild(img);
+    card.appendChild(name);
+    card.appendChild(description);
+    card.appendChild(price);
 
-    return div;
-
+    return card;
 }
+
+
+addMenuItems(
+    "STELLA BRAVA",
+    "Star-shaped pizza with tomato sauce, mozzarella, ricotta, pepperoni, and basil",
+    575,
+    "https://fornobravo.myshopify.com/cdn/shop/files/FornoBravo_Kids_031_503x.jpg?v=1736886881",
+    "food"
+);
+addMenuItems(
+    "CALZONE IL BRAVISSIMO",
+    "Mozzarella, gorgonzola, ricotta, peppers, mushrooms, raw onion, and white truffle oil",
+    625,
+    "https://fornobravo.myshopify.com/cdn/shop/products/calzonbravissimo_503x503.webp?v=1644433345",
+    "food"
+);
+addMenuItems(
+    "FOCCACIA ROSSA",
+    "Ricotta cheese, roasted tomatoes, aromatic herbs.",
+    420,
+    "https://fornobravo.myshopify.com/cdn/shop/products/focacciarossa_503x.webp?v=1644431985",
+    "food"
+);
+addMenuItems(
+    "FETTUCINE ALFREDO",
+    "Fresh homemade fettuccine with alfredo sauce.",
+    435,
+    "https://fornobravo.myshopify.com/cdn/shop/files/FornoBravo_Octubre2_086_503x.jpg?v=1736888141",
+    "food"
+);
+addMenuItems(
+    "ARRABIATA BRAVA SIN CAMARONES",
+    "Arrabiata sauce, peperoncini, pomodoro, and cherry tomatoes.",
+    425,
+    "https://fornobravo.myshopify.com/cdn/shop/files/ArrabiataBrava_503x.jpg?v=1736871701",
+    "food"
+);
+addMenuItems(
+    "RIGATONI DI MARIA",
+    "shrimp, truffle cream, goat cheese, gratinated with mozzarella.",
+    575,
+    "https://fornobravo.myshopify.com/cdn/shop/files/IMG_7052_1_503x.jpg?v=1736871380",
+    "food"
+);
+
+addMenuItems(
+    "CALA ROSSA",
+    "Frozen or fresh lemon and strawberry.",
+    245,
+    "https://fornobravo.myshopify.com/cdn/shop/files/frozenlimonyfresa_503x.jpg?v=1713984375",
+    "beverage"
+);
+addMenuItems(
+    "SAN VITO",
+    "Frozen or fresh strawberry and passion fruit",
+    245,
+    "https://fornobravo.myshopify.com/cdn/shop/files/FrozendeChinolayGranadina_503x.jpg?v=1713984213",
+    "beverage"
+);
+addMenuItems(
+    "CAPRI",
+    "Frozen or fresh lemon and mint juice.",
+    245,
+    "https://fornobravo.myshopify.com/cdn/shop/files/FrozendeLimonyMenta_503x.jpg?v=1713984170",
+    "beverage"
+);
+addMenuItems(
+    "PERONI",
+    "LAGER beer (ITALY)",
+    265,
+    "https://www.malabarbistro.es/wp-content/uploads/2022/09/product-13.jpeg",
+    "beverage"
+);
+addMenuItems(
+    "VILLA S. ANDREA II PERTICATO",
+    "Italian red wine",
+    2.745,
+    wineImg,
+    "beverage"
+);
