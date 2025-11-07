@@ -1,0 +1,11 @@
+# node
+node_modules/
+dist/
+
+# ОС
+.DS_Store
+Thumbs.db
+
+# редакторы
+.vscode/
+.idea/
