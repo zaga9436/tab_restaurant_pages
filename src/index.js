@@ -1,1 +1,6 @@
-console.log('Entry point loaded');
+import loadHome from './home.js';
+
+
+const content = document.getElementById('content');
+
+loadHome(content);
