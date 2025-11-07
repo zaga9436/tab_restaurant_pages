@@ -19,7 +19,7 @@ function addMenuItems(name, description, price, img, type) {
 }
 
 
-export default function loadHome(parentContainer) {
+export default function loadMenu(parentContainer) {
     const container = document.createElement('div');
     container.classList.add('card-container');
 
@@ -51,3 +51,34 @@ export default function loadHome(parentContainer) {
 
     parentContainer.appendChild(container);
 } 
+
+function createItemCard(menuItem) {
+    const card = document.createElement('div');
+    
+    if (item.type === 'food') {
+        card.classList.add('food-card');
+    } else if (item.type === 'beverage') {
+        card.classList.add('beverage-card');
+    }
+
+    const img = document.createElement('img');
+    img.src = item.img;
+
+    const name = document.createElement('h4');
+    name.textContent = item.name;
+    
+    const description = document.createElement('p');
+    description.classList.add('description');
+    description.textContent = item.description;
+
+    const price = document.createElement('p');
+    price.textContent = `$${item.price}.00`;
+
+    div.appendChild(img);
+    div.appendChild(name);
+    div.appendChild(description);
+    div.appendChild(price);
+
+    return div;
+
+}
