@@ -147,13 +147,7 @@ addMenuItems(
   "https://fornobravo.myshopify.com/cdn/shop/files/FrozendeLimonyMenta_503x.jpg?v=1713984170",
   "beverage"
 );
-addMenuItems(
-  "PERONI",
-  "LAGER beer (ITALY)",
-  265,
-  "https://www.malabarbistro.es/wp-content/uploads/2022/09/product-13.jpeg",
-  "beverage"
-);
+
 addMenuItems(
   "VILLA S. ANDREA II PERTICATO",
   "Italian red wine",
