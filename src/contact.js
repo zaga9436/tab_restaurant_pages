@@ -42,3 +42,38 @@ export default function loadContactPage(parentContainer) {
 
     parentContainer.appendChild(contactContaner);
 }
+
+
+function createContactCard(contact) {
+    const card = document.createElement('div');
+    card.classList.add('contact-card');
+
+    const logo = document.createElement('span');
+    logo.classList.add("material-icons", "contact-icon");
+    logo.textContent = contact.icon;
+
+    const title = document.createElement('h3');
+    title.textContent = contact.title;
+
+    const description = document.createElement('p');
+    description.textContent = contact.description;
+
+    card.appendChild(logo);
+    card.appendChild(title);
+    card.appendChild(description);
+
+    return card;
+}
+
+addContact("Phone", "+1 (555) 123-4567", "phone");
+addContact("E-mail", "contact@bravoIllHorno.com", "email");
+addContact(
+  "Location",
+  "57 John F. Kennedy Avenue, Ensanche La Fé, Santo Domingo, Dominican Republic.",
+  "location_on"
+);
+addContact(
+  "Schedule",
+  "Mon - Sat: 12:00 PM - 10:00 PM \nSunday: 12:00 PM - 11:30 PM",
+  "schedule"
+);
